@@ -10,4 +10,5 @@ label.pack(fill=X, expand=1)
 
 button = Button(frame, text="Exit", command=tk.destroy)
 button.pack(side=BOTTOM)
+
 tk.mainloop()
