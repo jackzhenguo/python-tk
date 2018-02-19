@@ -1,12 +1,11 @@
 from tkinter import *
-#from PIL import Image, ImageTk
 import os
 
 root=Tk() #
 
 root.title('tk using label') #根窗口的标题
 
-root.geometry('500x500') #根窗口的大小
+root.geometry('600x600') #根窗口的大小
 
 'text: Label显示的文本'
 'font: Label显示的字体'
@@ -19,16 +18,14 @@ x = Label(root,
           relief=RIDGE,
           padx = 5,pady=10)
 
-x.pack(pady=20,ipady=20)
+x.pack(cnf={'pady':20,'ipady':20})
 
 
 'Label y to show image'
 file_dir = os.path.dirname(os.getcwd()) + '\image\girl.png'
 bm = PhotoImage(file=file_dir)
 y = Label(root,image=bm)
-y.pack(before=x)
-
-
+y.pack(cnf={'before':x})
 
 #消息循环
 root.mainloop()
